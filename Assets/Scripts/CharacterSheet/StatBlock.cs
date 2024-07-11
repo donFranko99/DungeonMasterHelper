@@ -31,17 +31,31 @@ namespace CharacterSheet
             }
             Debug.Log("Stats has been set");
         }
-        
+
+        public int GetStatScore(Stats stat)
+        {
+            return stats[StatIndex[stat]];
+        }
+
+        public static readonly Dictionary<Stats, int> StatIndex = new Dictionary<Stats, int>
+        {
+            {Stats.Strength, 0},
+            {Stats.Dexterity, 1},
+            {Stats.Constitution, 2},
+            {Stats.Intelligence, 3},
+            {Stats.Wisdom, 4},
+            {Stats.Charisma, 5}
+        };
     }
 
     public enum Stats
     {
-        Strength=0,
-        Dexterity=1,
-        Constitution=2,
-        Intelligence=3,
-        Wisdom=4,
-        Charisma=5
+        Strength,
+        Dexterity,
+        Constitution,
+        Intelligence,
+        Wisdom,
+        Charisma
     }
 }
 

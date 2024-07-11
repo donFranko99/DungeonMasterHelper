@@ -6,7 +6,7 @@ namespace CharacterSheet
 {
     public static class SkillBlock
     {
-        private static readonly Dictionary<Skills, Stats> SkillsDictionary = new Dictionary<Skills, Stats>
+        public static readonly Dictionary<Skills, Stats> SkillsDictionary = new Dictionary<Skills, Stats>
         {
             {Skills.Acrobatics, Stats.Dexterity},
             {Skills.AnimalHandling, Stats.Wisdom},

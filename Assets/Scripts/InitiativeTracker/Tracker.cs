@@ -11,6 +11,7 @@ namespace InitiativeTracker
         // Initiative structure
         // combat value | name | initiative
 
+
         public static bool isCombat = false;
         Combatants active = new Combatants();
         Turn tracker = new Turn();
@@ -19,6 +20,7 @@ namespace InitiativeTracker
         void Start()
         {
             AddCombatante();
+            CharacterSaveLoad.CharacterSaveLoad.SaveCharacter("Anny", 18, 8);
         }
 
         public void AddCombatante()
